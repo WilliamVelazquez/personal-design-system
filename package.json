@@ -4,7 +4,8 @@
   "description": "Personal Design System created for React Components with Storybook",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.6.0",
-    "@storybook/react": "^5.1.11",
+    "@storybook/react": "5.1.11",
     "babel-loader": "8.0.6"
   }
 }
