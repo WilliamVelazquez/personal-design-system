@@ -4,7 +4,7 @@
   "description": "Personal Design System created for React Components with Storybook",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9001",
+    "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "repository": {
