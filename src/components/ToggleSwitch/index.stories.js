@@ -1,8 +1,8 @@
 //@Author William E. Velázquez A. - info@williamvelazquez.com
-import React, {useState} from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import ToggleSwitch from '../components/ToggleSwitch';
+import ToggleSwitch from '.';
 
 storiesOf('ToggleSwitch', module)
   .add('on', () => (
