@@ -1,4 +1,5 @@
-import {create} from '@storybook/theming'
+//@Author William E. Velázquez A. - info@williamvelazquez.com
+import {create} from '@storybook/theming';
 export default create ({
   base: 'light',
   colorPrimary: 'hotpink',
