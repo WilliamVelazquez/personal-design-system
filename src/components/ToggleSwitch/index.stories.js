@@ -10,7 +10,8 @@ storiesOf('Checkbox', module)
   .addDecorator(withKnobs)
   .add('ToggleSwitch', () => (
     <ToggleSwitch 
-      handleToggle={null}
+      disabled={boolean('Disabled', true)}
+      handleToggle={()=>console.log('toggle')}
       isChecked={boolean('Active', true)}
       trueColor={text('Active Color', '#4A90E2')}
       falseColor={text('Inactive Color', '#D9534F')}

@@ -1,5 +1,5 @@
 //@Author William E. Velázquez A. - info@williamvelazquez.com
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const SpanButtonCheckbox = styled.span`
   content: '';
@@ -20,7 +20,7 @@ export const LabelCheckbox = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 70px;
   height: 39px;
   /* width: 100px;
@@ -30,13 +30,33 @@ export const LabelCheckbox = styled.label`
   border-radius: 100px;
   position: relative;
   transition: background-color .2s;
-  background-color: ${props => props.isChecked?props.trueColor:props.falseColor};
+  background-color: ${props => props.isChecked ? props.trueColor : props.falseColor};
+  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'}
 
+  ${props => props.disabled ? 
+    css`
+      filter: grayscale(60%);
+      opacity: .7;
+    `
+    :
+    css`
+    &:active ${SpanButtonCheckbox} {
+      width: 45px;
+    }
+    `
+  }
+
+  /* ${props => !props.disabled && css`
+    &:active ${SpanButtonCheckbox} {
+      width: 45px;
+    }
+  `} */
+  
   /* &:active ${SpanButtonCheckbox}{
-    width: 60px;
+    width: 45px;
   } */
   /* &:active span{
-    width: 60px;
+    width: 45px;
   } */
 `;
 
@@ -62,7 +82,7 @@ export const DivCheckbox = styled.div`
     transform: translateX(-100%);
   }
 
-  ${LabelCheckbox}:active ${SpanButtonCheckbox} {
+  /* ${LabelCheckbox}:active ${SpanButtonCheckbox} {
     width: 45px;
-  }
+  } */
 `;
