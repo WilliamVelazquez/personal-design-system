@@ -1,13 +1,28 @@
 //@Author William E. Velázquez A. - info@williamvelazquez.com
 import React from 'react';
 
-import './styles.css';
+import { DivCheckbox, InputCheckbox, LabelCheckbox, SpanButtonCheckbox } from './styles';
+// import './styles.css';
 
-function ToggleSwitch(props) {
+export const ToggleSwitch = (props) => {
   const { id, isChecked, handleToggle, trueColor, falseColor } = props;
   return (
-    <React.Fragment>
-      <input
+    <DivCheckbox>
+      <InputCheckbox
+        type="checkbox"
+        id={id||`switch-new`}
+        checked={isChecked}
+        onChange={handleToggle}
+      />
+      <LabelCheckbox
+        isChecked={isChecked}
+        trueColor={trueColor}
+        falseColor={falseColor}
+        htmlFor={id||`switch-new`}
+      >
+        <SpanButtonCheckbox />
+      </LabelCheckbox>
+      {/* <input
         type="checkbox"
         id={id||`switch-new`}
         checked={isChecked}
@@ -20,8 +35,8 @@ function ToggleSwitch(props) {
         htmlFor={id||`switch-new`}
       >
         <span className={`switch-button`} />
-      </label>
-    </React.Fragment>
+      </label> */}
+    </DivCheckbox>
   );
 }
-export default ToggleSwitch;
+// export default ToggleSwitch;
