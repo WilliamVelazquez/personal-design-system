@@ -11,8 +11,8 @@ storiesOf('Checkbox', module)
   .add('ToggleSwitch', () => (
     <ToggleSwitch 
       handleToggle={null}
-      isChecked={boolean('Enabled', true)}
-      trueColor={text('Enabled Color', '#4A90E2')}
-      falseColor={text('Disabled Color', '#D9534F')}
+      isChecked={boolean('Active', true)}
+      trueColor={text('Active Color', '#4A90E2')}
+      falseColor={text('Inactive Color', '#D9534F')}
     />
   ));

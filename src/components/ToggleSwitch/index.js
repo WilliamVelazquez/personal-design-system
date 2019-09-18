@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { DivCheckbox, InputCheckbox, LabelCheckbox, SpanButtonCheckbox } from './styles';
-// import './styles.css';
 
 export const ToggleSwitch = (props) => {
   const { id, isChecked, handleToggle, trueColor, falseColor } = props;
@@ -10,7 +9,7 @@ export const ToggleSwitch = (props) => {
     <DivCheckbox>
       <InputCheckbox
         type="checkbox"
-        id={id||`switch-new`}
+        id={id||null}
         checked={isChecked}
         onChange={handleToggle}
       />
@@ -18,24 +17,10 @@ export const ToggleSwitch = (props) => {
         isChecked={isChecked}
         trueColor={trueColor}
         falseColor={falseColor}
-        htmlFor={id||`switch-new`}
+        htmlFor={id||null}
       >
         <SpanButtonCheckbox />
       </LabelCheckbox>
-      {/* <input
-        type="checkbox"
-        id={id||`switch-new`}
-        checked={isChecked}
-        onChange={handleToggle}
-        className="switch-checkbox"
-      />
-      <label
-        style={{ background: isChecked ? trueColor : falseColor }}
-        className="switch-label"
-        htmlFor={id||`switch-new`}
-      >
-        <span className={`switch-button`} />
-      </label> */}
     </DivCheckbox>
   );
 }

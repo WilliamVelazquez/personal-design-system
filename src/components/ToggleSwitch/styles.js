@@ -1,21 +1,19 @@
 //@Author William E. Velázquez A. - info@williamvelazquez.com
 import styled from 'styled-components';
 
-export const DivCheckbox = styled.div`
-  /* ${InputCheckbox}:checked + ${SpanButtonCheckbox} & {
-    left: calc(100% - 2px);
-    transform: translateX(-100%);
-  } */
-
-  /* ${LabelCheckbox}:active ${SpanButtonCheckbox} & {
-    width: 60px;
-  } */
-`;
-
-export const InputCheckbox = styled.input`
-  height: 0;
-  width: 0;
-  visibility: hidden;
+export const SpanButtonCheckbox = styled.span`
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 35px;
+  height: 35px;
+  /* width: 45px;
+  height: 45px; */
+  border-radius: 45px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 `;
 
 export const LabelCheckbox = styled.label`
@@ -33,24 +31,38 @@ export const LabelCheckbox = styled.label`
   position: relative;
   transition: background-color .2s;
   background-color: ${props => props.isChecked?props.trueColor:props.falseColor};
+
+  /* &:active ${SpanButtonCheckbox}{
+    width: 60px;
+  } */
+  /* &:active span{
+    width: 60px;
+  } */
 `;
 
-export const SpanButtonCheckbox = styled.span`
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 35px;
-  height: 35px;
-  /* width: 45px;
-  height: 45px; */
-  border-radius: 45px;
-  transition: 0.2s;
-  background: #fff;
-  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
-  
-  ${InputCheckbox}:checked + & {
+
+export const InputCheckbox = styled.input`
+  height: 0;
+  width: 0;
+  visibility: hidden;
+
+  /* &:checked + ${LabelCheckbox} ${SpanButtonCheckbox} {
     left: calc(100% - 2px);
     transform: translateX(-100%);
+  } */
+  /* &:checked + label span {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  } */
+`;
+
+export const DivCheckbox = styled.div`
+  ${InputCheckbox}:checked + ${LabelCheckbox} ${SpanButtonCheckbox} {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+
+  ${LabelCheckbox}:active ${SpanButtonCheckbox} {
+    width: 45px;
   }
 `;
