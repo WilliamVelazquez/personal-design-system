@@ -16,4 +16,4 @@ storiesOf('Checkbox', module)
       trueColor={text('Active Color', '#4A90E2')}
       falseColor={text('Inactive Color', '#D9534F')}
     />
-  ));
+  ),{ info: 'Switch for Boolean Values'});

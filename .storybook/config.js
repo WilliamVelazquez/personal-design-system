@@ -1,12 +1,14 @@
 //@Author William E. Velázquez A. - info@williamvelazquez.com
 import { configure } from '@storybook/react';
 
-import { addParameters } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { themes } from '@storybook/theming';
 
 // import pinkPanther from  './pinkPanther';
 import williamLogo from '../src/images/LogoWhite_55.png';
 
+addDecorator(withInfo({ styles:{header:{h1:{display: 'none'}, h2:{ fontWeight: 'bold'}}} }));
 addParameters({
   options: {
     theme: {
