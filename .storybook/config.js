@@ -10,7 +10,7 @@ import { themes } from '@storybook/theming';
 // import pinkPanther from  './pinkPanther';
 import williamLogo from '../src/images/LogoWhite_55.png';
 
-addDecorator(withInfo({ styles:{header:{h1:{display: 'none'}, h2:{ fontWeight: 'bold'}}} }));
+// addDecorator(withInfo({ styles:{header:{h1:{display: 'none'}, h2:{ fontWeight: 'bold'}}} }));
 addParameters({
   options: {
     theme: {
