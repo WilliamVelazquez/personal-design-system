@@ -1,4 +1,6 @@
-//@Author William E. Velázquez A. - info@williamvelazquez.com
+/**
+ * @author William Velazquez <info@williamvelazquez.com>
+ */
 import React from 'react';
 
 import { DivCheckbox, InputCheckbox, LabelCheckbox, SpanButtonCheckbox } from './styles';

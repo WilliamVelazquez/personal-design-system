@@ -1,4 +1,6 @@
-//@Author William E. Velázquez A. - info@williamvelazquez.com
+/**
+ * @author William Velazquez <info@williamvelazquez.com>
+ */
 import styled, {css} from 'styled-components';
 
 export const SpanButtonCheckbox = styled.span`

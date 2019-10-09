@@ -1,4 +1,6 @@
-//@Author William E. Velázquez A. - info@williamvelazquez.com
+/**
+ * @author William Velazquez <info@williamvelazquez.com>
+ */
 import { configure } from '@storybook/react';
 
 import { addDecorator, addParameters } from '@storybook/react';
